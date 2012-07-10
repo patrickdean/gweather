@@ -1,8 +1,8 @@
+require 'spec_helper.rb'
 
 describe ForecastConditions do
-  before do
-    @forecast = ForecastConditions.new
-  end
+  
+  let(:forecast) { ForecastConditions.new }
   
   subject { @forecast }
 

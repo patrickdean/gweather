@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<xml_api_reply version="1">
+  <weather module_id="0" tab_id="0" mobile_row="0" mobile_zipped="1" row="0" section="0" >
+    <forecast_information>
+      <city data="Madison, WI"/>
+      <postal_code data="madison"/>
+      <latitude_e6 data=""/>
+      <longitude_e6 data=""/>
+      <forecast_date data="2012-07-10"/>
+      <current_date_time data="2012-07-10 19:53:00 +0000"/>
+      <unit_system data="US"/>
+    </forecast_information>
+    <current_conditions>
+      <condition data="Mostly Cloudy"/>
+      <temp_f data="86"/>
+      <temp_c data="30"/>
+      <humidity data="Humidity: 30%"/>
+      <icon data="/ig/images/weather/mostly_cloudy.gif"/>
+      <wind_condition data="Wind: NE at 8 mph"/>
+    </current_conditions>
+    <forecast_conditions>
+      <day_of_week data="Tue"/>
+      <low data="63"/>
+      <high data="88"/>
+      <icon data="/ig/images/weather/mostly_sunny.gif"/>
+      <condition data="Mostly Sunny"/>
+    </forecast_conditions>
+    <forecast_conditions>
+      <day_of_week data="Wed"/>
+      <low data="63"/>
+      <high data="90"/>
+      <icon data="/ig/images/weather/sunny.gif"/>
+      <condition data="Clear"/>
+    </forecast_conditions>
+    <forecast_conditions>
+      <day_of_week data="Thu"/>
+      <low data="61"/>
+      <high data="91"/>
+      <icon data="/ig/images/weather/sunny.gif"/>
+      <condition data="Clear"/>
+    </forecast_conditions>
+    <forecast_conditions>
+      <day_of_week data="Fri"/>
+      <low data="70"/>
+      <high data="93"/>
+      <icon data="/ig/images/weather/mostly_sunny.gif"/>
+      <condition data="Mostly Sunny"/>
+    </forecast_conditions>
+  </weather>
+</xml_api_reply>
