@@ -1,0 +1,4 @@
+
+describe CurrentConditions do
+
+end
