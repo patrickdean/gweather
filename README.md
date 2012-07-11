@@ -40,5 +40,6 @@ puts weather.friday.condition                # Partly Cloudy
 
 TODO:
 + add error response for bad input
++ make WeatherData objects print out nice
 + add comments
 + bundle as a gem
