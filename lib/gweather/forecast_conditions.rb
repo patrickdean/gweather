@@ -28,19 +28,19 @@ class ForecastConditions
 
     def convert_day(day)
       case day
-      when /^Su/
+      when /^Sun/
         "Sunday"
-      when /^M/
+      when /^Mon/
         "Monday"
-      when /^Tu/
+      when /^Tue/
         "Tuesday"
-      when /^W/
+      when /^Wed/
         "Wednesday"
-      when /^Th/
+      when /^Thu/
         "Thursday"
-      when /^F/
+      when /^Fri/
         "Friday"
-      when /^Sa/
+      when /^Sat/
         "Saturday"
       else
         "Not a day"

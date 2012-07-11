@@ -26,13 +26,13 @@ describe ForecastConditions do
   end
 
   describe "should give correct days" do
-    test_days = [[['M', 'Mo', 'Mon', 'Monday'], 'Monday'], 
-                 [['Tu', 'Tue', 'Tuesday'], 'Tuesday'],
-                 [['W', 'We', 'Wed', 'Wednesday'],'Wednesday'],
-                 [['Th', 'Thu', 'Thursday'], 'Thursday'],
-                 [['F', 'Fr', 'Fri', 'Friday'], 'Friday'],
-                 [['Sa', 'Sat', 'Saturday'], 'Saturday'],
-                 [['Su', 'Sun', 'Sunday'], 'Sunday']]
+    test_days = [[['Mon', 'Monday'], 'Monday'], 
+                 [['Tue', 'Tuesday'], 'Tuesday'],
+                 [['Wed', 'Wednesday'],'Wednesday'],
+                 [['Thu', 'Thursday'], 'Thursday'],
+                 [['Fri', 'Friday'], 'Friday'],
+                 [['Sat', 'Saturday'], 'Saturday'],
+                 [['Sun', 'Sunday'], 'Sunday']]
     test_days.each do |test_data, day|
       test_data.each do |test_day|
         it "should match #{day}" do
