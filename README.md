@@ -31,8 +31,8 @@ puts weather.current.wind                   # SE at 5 mph
 # google weather uses 4 day forecast, can be accessed with: today, tomorrow,
 # in_two_days, and in_three_days. Also can be accessed by day of the week:
 # if today == tuesday, then weather.tuesday, weather.wednesday, etc
-weather.tomorrow.high                       # get tomorrow's high, in F
-weather.today.low                           # low temperature
-weather.in_two_days.day                     # day of the week
-weather.friday.condition                    # Partly Cloudy
+puts weather.tomorrow.high                   # get tomorrow's high, in F
+puts weather.today.low                       # low temperature
+puts weather.in_two_days.day                 # day of the week
+puts weather.friday.condition                # Partly Cloudy
 ```
