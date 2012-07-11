@@ -32,7 +32,7 @@ puts weather.current.wind                   # SE at 5 mph
 # in_two_days, and in_three_days. Also can be accessed by day of the week:
 # if today == tuesday, then weather.tuesday, weather.wednesday, etc
 weather.tomorrow.high                       # get tomorrow's high, in F
-weather.today.low                           # low
+weather.today.low                           # low temperature
 weather.in_two_days.day                     # day of the week
 weather.friday.condition                    # Partly Cloudy
 ```
