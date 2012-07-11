@@ -1,13 +1,13 @@
 require './lib/gweather.rb'
 
 class WeatherData
-  attr_reader :city, :date, :location, :current
-  alias :currently :current
-
+  attr_reader :city, :date, :current
+  
   class << self
     def create(zipcode)
+      zipcode = zipcode.to_s.gsub(' ', '+')
       gweather_url = 'http://www.google.com/ig/api?weather='
-      from_xml(gweather_url + zipcode.to_s)
+      from_xml(gweather_url + zipcode)
     end
 
     def from_xml(filename)

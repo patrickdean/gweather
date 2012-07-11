@@ -9,7 +9,6 @@ describe WeatherData do
 
   it { should respond_to(:city) }
   it { should respond_to(:current) }
-  it { should respond_to(:currently) }
   it { should respond_to(:today) }
   it { should respond_to(:tomorrow) }
   it { should respond_to(:in_two_days) }
@@ -28,7 +27,7 @@ describe WeatherData do
   end
 
   it "should get current conditions" do
-    @data.currently.should be_kind_of(CurrentConditions)
+    @data.current.should be_kind_of(CurrentConditions)
   end
 
   it "should get current day's forecast" do
