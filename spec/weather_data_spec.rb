@@ -46,4 +46,22 @@ describe WeatherData do
   it "should get fourth day's forecast" do
     @data.in_three_days.should be_kind_of(ForecastConditions)
   end
+
+  describe "future forecast" do
+    it "example.xml should give tuesday as today" do
+      @data.today.should == @data.tuesday
+    end
+
+    it "example.xml should give wednesday as tomorrow" do
+      @data.tomorrow.should == @data.wednesday
+    end
+
+    it "example.xml should give thursday as in_two_days" do
+      @data.in_two_days.should == @data.thursday
+    end
+
+    it "example.xml should give friday as in_three_days" do
+      @data.in_three_days.should == @data.friday
+    end
+  end
 end

@@ -8,8 +8,6 @@ class CurrentConditions
       raise "must be of type Nokogiri::XML::Element" 
     end
 
-    
-
     condition = current.condition.attributes["data"].value
     fahrenheit = current.temp_f.attributes["data"].value.to_i
     celsius = current.temp_c.attributes["data"].value.to_i

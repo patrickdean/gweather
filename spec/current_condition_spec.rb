@@ -11,6 +11,7 @@ describe CurrentConditions do
 
   subject { current }
 
+  it { should respond_to(:temperature) }
   it { should respond_to(:fahrenheit) }
   it { should respond_to(:celsius) }
   it { should respond_to(:condition) }

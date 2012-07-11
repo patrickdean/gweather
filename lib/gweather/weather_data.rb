@@ -39,7 +39,6 @@ class WeatherData
     @city, @date, @current, @forecasts = city, date, current, forecasts
   end
 
-
   def method_missing(method, *args)
     if self.class.relative_days.member?(method)
       get_by_relative_day(method) 
@@ -56,7 +55,6 @@ class WeatherData
     super
   end
 
-
   private
 
     def get_by_relative_day(day)
@@ -64,8 +62,9 @@ class WeatherData
     end
 
     def get_by_weekday(day)
-      @forecasts.each do |forecast| 
-        return forecast if forecast.day.to_sym == day 
+      
+      @forecasts.each do |key, forecast| 
+        return forecast if forecast.day.downcase.to_sym == day 
       end
       "No data for #{day}"
     end
