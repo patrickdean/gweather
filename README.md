@@ -2,7 +2,7 @@ gweather, a(nother) google weather api wrapper in ruby
 ======================================================
 
 This is my first ruby gem. I wanted to do something relatively simple to get
-the hang of it, thus another weather gem.
+the hang of it, thus, another weather gem.
 
 
 Using my gem is simple!
@@ -36,3 +36,8 @@ puts weather.today.low                       # low temperature
 puts weather.in_two_days.day                 # day of the week
 puts weather.friday.condition                # Partly Cloudy
 ```
+
+
+TODO:
++ add comments
++ bundle as a gem
