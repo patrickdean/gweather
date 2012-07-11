@@ -1,10 +1,9 @@
-require '../gweather.rb'
-
+require './lib/gweather.rb'
 
 class CurrentConditions
 
   def self.from_element(*args)
-    false
+    CurrentConditions.new
   end
 
   def initialize

@@ -1,19 +1,27 @@
-require "../gweather.rb"
+require './lib/gweather.rb'
 
 class WeatherData
   attr_reader :city, :date, :location, :current
   alias :currently :current
+
   class << self
+    def create(zipcode)
+      gweather_url = 'http://www.google.com/ig/api?weather='
+      from_xml(gweather_url + zipcode.to_s)
+    end
+
     def from_xml(filename)
       file = Nokogiri::XML(open(filename))
       file.slop!
       weather = file.xml_api_reply.weather
-      @city = weather.forecast_information.city.attributes["data"].value
-      @date = weather.forecast_information.forecast_date.attributes["data"].value
-      @current = CurrentConditions.from_element(weather.current_conditions)
-      weather.forecast_conditions.each do |forecast|
-        @data << ForecastCondition.from_element(forecast)
+      city = weather.forecast_information.city.attributes["data"].value
+      date = weather.forecast_information.forecast_date.attributes["data"].value
+      current = CurrentConditions.from_element(weather.current_conditions)
+      data = {}
+      weather.forecast_conditions.each_with_index do |forecast, index|
+        data[relative_days[index]] = ForecastConditions.from_element(forecast)
       end
+      new(city, date, current, data)
     end
 
     def relative_days
@@ -27,9 +35,8 @@ class WeatherData
     end
   end
 
-  def initialize(location)
-    @location = location
-    @data = []
+  def initialize(city = nil, date = nil, current = nil, forecasts = {})
+    @city, @date, @current, @forecasts = city, date, current, forecasts
   end
 
 
@@ -53,11 +60,13 @@ class WeatherData
   private
 
     def get_by_relative_day(day)
-      @data[day]
+      @forecasts[day]
     end
 
     def get_by_weekday(day)
-      @data.each { |forecast| return forecast if forecast.day == day }
+      @forecasts.each do |forecast| 
+        return forecast if forecast.day.to_sym == day 
+      end
       "No data for #{day}"
     end
 end
