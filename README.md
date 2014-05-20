@@ -1,4 +1,4 @@
-gweather, a(nother) google weather api wrapper in ruby
+gweather, a google weather api wrapper in ruby
 ======================================================
 
 This is my first ruby gem. I wanted to do something relatively simple to get
